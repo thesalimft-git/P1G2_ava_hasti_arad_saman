@@ -1,5 +1,0 @@
-students = {
-    '103': {'name': 'ali', 'score': {'math': 20, 'chimi': 19}},
-    '104': {'name': 'reza', 'score': {'math': 18}},
-    '105': {'name': 'sara', 'score': {'chimi': 17}},
-}
