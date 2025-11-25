@@ -1,7 +1,16 @@
+# import data_manager
+# try:
+#     Tasks = data_manager.get_data()
+# except:
+#     print('can not read the file')
+#     Tasks = []
 
+from data_manager import DataManager
+
+dtm = DataManager('session19/02/data.json')
 
 Tasks = []
-
+    
 def show_manu():
     print("\n--------------------------")
     print("1. View Task")
@@ -68,10 +77,11 @@ def main():
             case '4':
                 delete_task()
             case '5':
+                # data_manager.set_data(Tasks)
+                dtm.set(Tasks)
                 break
             case _:
                 print('invalid command')
-
 
 
 main()

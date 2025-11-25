@@ -1,6 +1,10 @@
+import data_manager
 
-
-Tasks = []
+try:
+    Tasks = data_manager.get_data()
+except:
+    print('can not read the file')
+    Tasks = []
 
 def show_manu():
     print("\n--------------------------")
@@ -68,10 +72,10 @@ def main():
             case '4':
                 delete_task()
             case '5':
+                data_manager.set_data(Tasks)
                 break
             case _:
                 print('invalid command')
-
 
 
 main()
